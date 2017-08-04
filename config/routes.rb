@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :posts do
+     resources :comments
+   end
   get "hello/:name" => "greetings#hello"
   get "posts" => "posts#index"
   get "posts/new" => "posts#new"
